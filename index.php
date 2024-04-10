@@ -56,6 +56,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") { //controllo se la richiesta è di ti
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
                 <input type="email" name="email" class="form-control" id="email">
+                <?php echo isset($errors["email"])?"<div class='text-danger'>$errors[email]</div>":"" ?>
+
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
